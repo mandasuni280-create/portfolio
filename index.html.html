@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sunira Were Manda | Aspiring Software Developer</title>
+<meta name="description" content="Portfolio of Sunira Were Manda, an aspiring software developer exploring Django backend development, AI-assisted frontend creation, automation and generative AI.">
+<meta property="og:title" content="Sunira Were Manda | Aspiring Software Developer">
+<meta property="og:description" content="Building with code, creating with AI, driven by purpose.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0f14'/%3E%3Cpath d='M32 8l6 12 13-3-3 13 12 6-12 6 3 13-13-3-6 12-6-12-13 3 3-13-12-6 12-6-3-13 13 3z' fill='none' stroke='%2334d399' stroke-width='2.5'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='Arial' font-weight='700' font-size='17' fill='%23fff'%3ESWM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0f14;--bg2:#13161d;--card:rgba(255,255,255,.04);--bd:rgba(255,255,255,.10);--tx:#f5f6f8;--mut:#a3a9b6;--em:#34d399;--vi:#8b7cf6;--nav:rgba(13,15,20,.72);--pat:rgba(255,255,255,.055);
+--hf:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--bf:'Instrument Sans','Segoe UI',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme=light]{--bg:#f7f7f4;--bg2:#ffffff;--card:rgba(20,22,30,.035);--bd:rgba(20,22,30,.12);--tx:#14161e;--mut:#555b69;--em:#0b8f63;--vi:#5b4bd6;--nav:rgba(247,247,244,.78);--pat:rgba(20,22,30,.07)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.7 var(--bf);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+h1,h2,h3{font-family:var(--hf);line-height:1.08;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(2rem,4.6vw,3.2rem);font-weight:800;margin-bottom:18px}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0 0 14px;max-width:62ch}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--em);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:104px 0;position:relative}
+.sub{color:var(--mut);max-width:60ch;margin-bottom:44px}
+.lead{color:var(--em);font-weight:600;font-size:.95rem;margin-bottom:10px;display:block}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--nav);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--bd)}
+.nb{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--hf);font-weight:800}
+.logo svg{width:38px;height:38px}
+.links{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0}
+.links a{text-decoration:none;color:var(--mut);font-size:.95rem;font-weight:500;transition:color .2s}
+.links a:hover{color:var(--tx)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;font:600 .95rem var(--bf);text-decoration:none;border:1px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--em)}
+.btn.pri{background:var(--em);color:#06150f;border-color:var(--em)}
+.btn.pri:hover{background:#5eeab4}
+.ico{width:42px;height:42px;padding:0;justify-content:center}
+.ico svg,.btn svg{width:18px;height:18px}
+#menu{display:none}
+.hero{padding:88px 0 96px;overflow:hidden}
+.hg{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border:1px solid var(--bd);border-radius:99px;background:var(--card);font-size:.88rem;color:var(--mut);margin-bottom:26px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--em);box-shadow:0 0 0 0 var(--em);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.9rem);font-weight:800}
+.hero h1 span{display:block;color:var(--mut)}
+.hero p.in{font-size:1.1rem;color:var(--mut);margin:26px 0 28px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+.chip{padding:7px 14px;border-radius:99px;border:1px solid var(--bd);font-size:.86rem;background:var(--card)}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.art{position:relative;aspect-ratio:1;max-width:460px;margin:0 auto;width:100%}
+.art svg{width:100%;height:100%}
+.spin{transform-origin:200px 200px;animation:rot 60s linear infinite}
+.spin2{transform-origin:200px 200px;animation:rot 90s linear infinite reverse}
+@keyframes rot{to{transform:rotate(360deg)}}
+.glow{position:absolute;inset:12%;background:radial-gradient(circle,rgba(139,124,246,.28),rgba(52,211,153,.1) 55%,transparent 72%);filter:blur(30px);z-index:-1}
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:28px;transition:border-color .25s,transform .25s}
+.card:hover{border-color:rgba(52,211,153,.45)}
+.card p{color:var(--mut);font-size:.97rem}
+.tag{display:inline-block;font-size:.78rem;font-weight:600;padding:3px 11px;border-radius:99px;margin-bottom:14px}
+.t-fam{background:rgba(52,211,153,.14);color:var(--em)}
+.t-ai{background:rgba(139,124,246,.16);color:var(--vi)}
+.t-learn{background:rgba(250,190,70,.14);color:#e0a526}
+:root[data-theme=light] .t-learn{color:#8a5d00}
+.sk{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.sk span{font-size:.86rem;padding:5px 12px;border:1px solid var(--bd);border-radius:10px}
+.sk .l{border-style:dashed;color:var(--mut)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.about p{color:var(--mut)}
+.fl{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.fl button{padding:9px 18px;border-radius:99px;border:1px solid var(--bd);background:transparent;color:var(--mut);font:500 .9rem var(--bf);cursor:pointer;transition:.2s}
+.fl button[aria-pressed=true]{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+.proj{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.shot{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:.85rem;border-bottom:1px dashed var(--bd);background:linear-gradient(135deg,rgba(139,124,246,.1),rgba(52,211,153,.07))}
+.pb{padding:24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pb .sk{margin-top:auto}
+.pb small{color:var(--mut);display:block}
+.pl{display:flex;gap:16px;margin-top:10px;font-size:.9rem;font-weight:600}
+.pl a{color:var(--em);text-decoration:none}
+[hidden]{display:none!important}
+select{font:inherit;color:var(--tx);background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:13px 15px;width:100%}
+select option{background:var(--bg2)}
+dialog{background:var(--bg2);color:var(--tx);border:1px solid var(--bd);border-radius:20px;padding:28px;width:min(560px,calc(100% - 32px));max-height:90vh;overflow:auto}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+.shotimg{width:100%;aspect-ratio:16/9;object-fit:cover;border-bottom:1px solid var(--bd);display:block}
+.rm{background:none;border:0;color:#f87171;font:inherit;cursor:pointer;margin-left:auto;padding:0}
+.tl{position:relative;list-style:none;margin:0;padding:0 0 0 34px;max-width:760px}
+.tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--em),var(--vi),transparent)}
+.tl li{position:relative;margin-bottom:12px}
+.tl li::before{content:"";position:absolute;left:-34px;top:20px;width:20px;height:20px;border-radius:50%;background:var(--bg);border:2px solid var(--em)}
+.tl li.now::before{border-color:#e0a526;animation:pulse 2.4s infinite;box-shadow:0 0 0 0 #e0a526}
+.tl button{width:100%;text-align:left;background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:16px 20px;color:var(--tx);font:600 1.02rem var(--bf);cursor:pointer;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.tl button:hover{border-color:var(--em)}
+.tl .d{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}
+.tl .d>div{overflow:hidden}
+.tl .d p{padding:12px 20px 4px;color:var(--mut);margin:0;font-size:.96rem}
+.tl li.open .d{grid-template-rows:1fr}
+.tl li.open button svg{transform:rotate(180deg)}
+.tl button svg{width:18px;height:18px;transition:transform .25s;flex:none}
+.alt{background:var(--bg2);border-block:1px solid var(--bd)}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:8px 0 40px}
+.flow div{padding:12px 18px;border-radius:14px;border:1px solid var(--bd);background:var(--card);font-size:.92rem}
+.flow b{color:var(--em)}
+.purpose{background:var(--bg2);border-block:1px solid var(--bd);overflow:hidden}
+.pattern{position:absolute;inset:0;opacity:1;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M40 6l7 14 15-4-4 15 14 7-14 7 4 15-15-4-7 14-7-14-15 4 4-15-14-7 14-7-4-15 15 4z' fill='none' stroke='%23888' stroke-opacity='.16'/%3E%3C/svg%3E");-webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 0,transparent 75%);mask-image:radial-gradient(ellipse at 50% 40%,#000 0,transparent 75%);pointer-events:none}
+.purpose .wrap{position:relative}
+.purpose h2{max-width:18ch}
+.vcard{padding:34px}
+.vcard .n{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:rgba(139,124,246,.15);color:var(--vi);margin-bottom:18px}
+.vcard.is .n{background:rgba(52,211,153,.15);color:var(--em)}
+.n svg{width:24px;height:24px}
+.vcard ul{margin:14px 0 0;padding-left:20px;color:var(--mut);font-size:.95rem}
+.note{font-size:.85rem;color:var(--mut);margin-top:16px}
+.vg .card{padding:24px}
+.vg .card svg{width:22px;height:22px;color:var(--em);margin-bottom:12px}
+.cg{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+form{display:grid;gap:16px}
+label{font-size:.9rem;font-weight:600;display:grid;gap:7px}
+input,textarea{font:inherit;color:var(--tx);background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:13px 15px;width:100%}
+input:focus,textarea:focus{outline:2px solid var(--em);outline-offset:1px;border-color:transparent}
+textarea{min-height:130px;resize:vertical}
+#fm{font-size:.9rem;color:var(--em);min-height:1.4em;margin:0}
+footer{border-top:1px solid var(--bd);padding:34px 0;color:var(--mut);font-size:.9rem}
+.fb{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:860px){
+.hg,.about,.cg,.g2,.g3{grid-template-columns:1fr}
+.hero{padding-top:48px}.art{max-width:300px;order:-1}
+section{padding:76px 0}
+#menu{display:inline-flex}
+.links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--bd);padding:10px 24px 20px}
+.links.open{display:flex}.links li{padding:10px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="mono" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#0d0f14"/><path d="M32 7l6 12 13-3-3 13 12 6-12 6 3 13-13-3-6 12-6-12-13 3 3-13-12-6 12-6-3-13 13 3z" fill="none" stroke="#34d399" stroke-width="2"/><text x="32" y="37.5" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="16" fill="#fff">SWM</text></symbol>
+</defs></svg>
+
+<nav aria-label="Main">
+<div class="wrap nb">
+<a class="logo" href="#home" aria-label="SWM home"><svg><use href="#mono"/></svg><span>Sunira Were Manda</span></a>
+<ul class="links" id="links">
+<li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#vision">My Vision</a></li><li><a href="#contact">Contact</a></li>
+<li><a class="btn pri" href="#contact">Let’s Connect</a></li>
+</ul>
+<div class="row" style="gap:8px">
+<button class="btn ico" id="theme" aria-label="Switch to light theme" type="button"></button>
+<button class="btn ico" id="menu" aria-label="Open menu" aria-expanded="false" type="button"></button>
+</div>
+</div>
+</nav>
+
+<main>
+<section class="hero" id="home"><div class="wrap hg">
+<div>
+<div class="pill"><span class="dot"></span>Currently learning: GenAI &amp; LLMs</div>
+<h1>Building With Code. Creating With AI. <span>Driven By Purpose.</span></h1>
+<p class="in">I’m Sunira Were Manda, an aspiring software developer exploring the intersection of backend engineering, AI-assisted development, and intelligent applications. I build with Django, create modern interfaces using AI-powered workflows, and continuously explore new ways technology can solve meaningful problems.</p>
+<div class="chips"><span class="chip">Backend development</span><span class="chip">AI-assisted frontend creation</span><span class="chip">Generative AI exploration</span><span class="chip">Business automation</span></div>
+<div class="row">
+<a class="btn pri" href="#projects">Explore My Work</a>
+<a class="btn" href="#contact">Let’s Connect</a>
+<a class="btn ico" href="https://github.com/YOUR-USERNAME" aria-label="GitHub" rel="noopener" data-i="github"></a>
+<a class="btn ico" href="https://linkedin.com/in/YOUR-USERNAME" aria-label="LinkedIn" rel="noopener" data-i="linkedin"></a>
+</div>
+</div>
+<div class="art" aria-hidden="true"><div class="glow"></div>
+<svg viewBox="0 0 400 400" fill="none">
+<g class="spin" stroke="currentColor" style="color:var(--bd)"><circle cx="200" cy="200" r="190" stroke-dasharray="2 8"/><path d="M200 20l36 72 78-22-22 78 72 36-72 36 22 78-78-22-36 72-36-72-78 22 22-78-72-36 72-36-22-78 78 22z" stroke="var(--vi)" stroke-opacity=".55" stroke-width="1.5"/></g>
+<g class="spin2"><rect x="95" y="95" width="210" height="210" rx="6" stroke="var(--em)" stroke-opacity=".6" stroke-width="1.5"/><rect x="95" y="95" width="210" height="210" rx="6" stroke="var(--em)" stroke-opacity=".6" stroke-width="1.5" transform="rotate(45 200 200)"/></g>
+<circle cx="200" cy="200" r="78" fill="#0d0f14" stroke="var(--bd)"/>
+<text x="200" y="192" text-anchor="middle" font-family="Bricolage Grotesque,Arial,sans-serif" font-weight="800" font-size="44" fill="#fff">SWM</text>
+<text x="200" y="222" text-anchor="middle" font-family="Instrument Sans,Arial,sans-serif" font-size="15" fill="#34d399">&lt;/&gt; django · ai</text>
+</svg></div>
+</div></section>
+
+<section id="about" class="alt"><div class="wrap about rv">
+<div><span class="lead">About me</span><h2>Curious about how useful software gets built.</h2></div>
+<div>
+<p>I’m currently a first-year student at Multimedia University. Alongside my studies, I’m self-driven in my learning, always seeking knowledge and working to advance my skills.</p>
+<p>I’m an aspiring software developer who wants to build useful digital products and solve real problems. My foundation is Python and Django, and I’m comfortable with basic Django REST Framework CRUD operations while I keep sharpening my API skills.</p>
+<p>On the frontend, I’m open about my approach: I use AI-assisted tools and design workflows to create modern React and Tailwind CSS interfaces. My strength is directing and customizing those experiences, not writing frontend code from scratch on my own.</p>
+<p>I also use Make.com to explore simple automations for small businesses, and I’m now learning Generative AI, LLMs and how to connect them to backend applications. The long-term goal is a company that builds valuable software.</p>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<span class="lead">Technical skills</span><h2>What I know, and what I’m still learning.</h2>
+<p class="sub">Each card is labeled by how I actually work with it. No made-up percentages.</p>
+<div class="grid g2 rv" id="skillGrid"></div>
+</div></section>
+
+<section id="projects" class="alt"><div class="wrap">
+<span class="lead">Featured projects</span><h2>Selected work.</h2>
+<p class="sub">Things I’ve built and am building, shared as I finish them.</p>
+<div class="fl" id="filters" role="group" aria-label="Filter projects"></div>
+<div id="own" class="row" style="margin-bottom:24px" hidden><button class="btn pri" id="addP" type="button">Add project</button><button class="btn" id="expP" type="button">Copy projects data</button><span class="note" id="expM" style="margin:0">Owner mode: projects are saved in this browser only.</span></div>
+<div class="grid g3" id="projGrid"></div>
+<dialog id="dlg" aria-labelledby="dt"><form id="pf"><h3 id="dt">Add a project</h3><label>Project name<input id="pn" required></label><label>Category<select id="pc"><option>Backend</option><option>Frontend</option><option>Full-Stack</option><option>AI &amp; Automation</option></select></label><label>Description<textarea id="pd" style="min-height:80px"></textarea></label><label>Problem it solves<textarea id="pp" style="min-height:80px"></textarea></label><label>Tech stack (comma separated)<input id="ps" placeholder="Python, Django, DRF"></label><label>GitHub link (optional)<input id="pg" type="url" placeholder="https://github.com/..."></label><label>Live demo link (optional)<input id="pv" type="url" placeholder="https://..."></label><label>Screenshot (optional)<input id="pi" type="file" accept="image/*"></label><div class="row"><button class="btn pri" type="submit">Save project</button><button class="btn" id="cx" type="button">Cancel</button></div></form></dialog>
+</div></section>
+
+<section id="journey"><div class="wrap">
+<span class="lead">My learning journey</span><h2>Still learning, on purpose.</h2>
+<p class="sub">The amber steps are what I’m working on right now. Select a step to read more.</p>
+<ol class="tl" id="tl"></ol>
+</div></section>
+
+<section id="automation" class="alt"><div class="wrap">
+<span class="lead">Automation &amp; business solutions</span><h2>Less repetitive work for small teams.</h2>
+<p class="sub">I use Make.com to explore simple workflows that save time. I’m learning how they help, and I’m not claiming to have delivered enterprise systems.</p>
+<div class="flow rv"><div>Customer fills a form</div><b>then</b><div>Make.com scenario runs</div><b>then</b><div>Data saved to a sheet or app</div><b>then</b><div>Team gets notified</div></div>
+<div class="grid g3 rv" id="autoGrid"></div>
+</div></section>
+
+<section id="vision" class="purpose"><div class="pattern"></div><div class="wrap">
+<span class="lead">Beyond Code</span><h2>The Vision I’m Building Towards</h2>
+<p class="sub" style="font-size:1.15rem;color:var(--tx)">Technology With Purpose. Knowledge Without Barriers.</p>
+<div class="grid g2 rv">
+<div class="card vcard"><div class="n" data-i="building"></div><h3>A software-driven company</h3><p style="margin-top:10px">My long-term ambition is to build a company that creates valuable SaaS products: technology that solves real problems and helps businesses work more efficiently.</p><ul><li>SaaS products</li><li>AI-powered applications</li><li>Business automation</li><li>Productivity software</li><li>Intelligent web applications</li></ul><p class="note">A future ambition, not an established company.</p></div>
+<div class="card vcard is"><div class="n" data-i="book"></div><h3>A free Islamic learning platform</h3><p style="margin-top:10px">I dream of a platform that makes authentic Islamic knowledge accessible to Muslims whatever their financial situation, especially knowledge in Arabic, so that cost never stops someone from learning their religion.</p><ul><li>Accessible educational resources</li><li>Arabic learning materials</li><li>Structured learning pathways</li><li>Articles and lessons</li><li>Resources for beginners and lifelong learners</li></ul><p class="note">A future vision, not a completed project.</p></div>
+</div></div></section>
+
+<section id="values"><div class="wrap">
+<span class="lead">Principles</span><h2>Values That Guide My Work</h2>
+<p class="sub">Faith is the most important guide in my life, and it shapes the kind of work I choose to build. That includes avoiding businesses tied to alcohol, inappropriate advertising or interest-based lending.</p>
+<div class="grid g3 vg rv" id="valGrid"></div>
+</div></section>
+
+<section id="contact" class="alt"><div class="wrap cg">
+<div class="rv"><span class="lead">Contact</span><h2>Let’s Build Something Meaningful.</h2>
+<p style="color:var(--mut)">I’m open to collaborations, learning opportunities, internships and conversations about software, automation and AI. If you’re building something useful, I’d love to hear about it.</p>
+<div class="row" style="margin-top:22px">
+<a class="btn" href="mailto:mandasuni280@gmail.com"><span data-i="mail"></span>mandasuni280@gmail.com</a>
+<a class="btn ico" href="https://github.com/YOUR-USERNAME" aria-label="GitHub" data-i="github"></a>
+<a class="btn ico" href="https://linkedin.com/in/YOUR-USERNAME" aria-label="LinkedIn" data-i="linkedin"></a>
+</div></div>
+<form id="cf" class="card" novalidate>
+<label>Your name<input id="n" name="name" autocomplete="name" required></label>
+<label>Your email<input id="e" name="email" type="email" autocomplete="email" required></label>
+<label>Message<textarea id="m" name="message" required></textarea></label>
+<button class="btn pri" type="submit">Send message</button>
+<p id="fm" role="status"></p>
+</form>
+</div></section>
+</main>
+
+<footer><div class="wrap fb">
+<a class="logo" href="#home" aria-label="Back to top"><svg style="width:30px;height:30px"><use href="#mono"/></svg><span>SWM</span></a>
+<span>© <span id="yr"></span> Sunira Were Manda. Built with intention.</span>
+<button id="ownT" type="button" style="background:none;border:0;color:var(--mut);font:inherit;cursor:pointer;text-decoration:underline;padding:0">Owner mode</button>
+</div></footer>
+
+<script>
+/* ===== EDIT YOUR CONTENT HERE ===== */
+var LINKS={email:"mandasuni280@gmail.com",github:"https://github.com/mandasuni280-create",linkedin:"https://www.linkedin.com/in/sunira-manda-941b42434"};
+var SKILLS=[
+{t:"Backend development",tag:"Familiar with",c:"fam",d:"The core of my work today.",i:["Python","Django","Basic Django REST Framework","CRUD APIs","Basic database integration"]},
+{t:"AI-assisted frontend creation",tag:"AI-assisted workflow",c:"ai",d:"I direct and customize AI-generated interfaces. I don’t claim to write React independently.",i:["React (AI-generated)","Tailwind CSS (AI-generated)","UI/UX direction","Responsive layouts","Prompting design tools"]},
+{t:"Automation",tag:"Familiar with",c:"fam",d:"Simple workflows that cut repetitive work.",i:["Make.com","Basic workflow automation","Connecting apps"]},
+{t:"Development tools",tag:"Familiar with",c:"fam",d:"My everyday toolkit.",i:["Git","GitHub","PyCharm","Docker (basic)","AI coding assistants"]},
+{t:"Artificial intelligence",tag:"Currently learning",c:"learn",d:"Where most of my study time goes right now.",i:["Generative AI","Large Language Models","Prompt engineering","AI API integration","LLMs in Django apps"],l:1},
+{t:"Advanced APIs",tag:"Currently learning",c:"learn",d:"Moving beyond the basics.",i:["Advanced Django REST Framework","Authentication","Serializers and viewsets"],l:1}];
+var PROJECTS=[]; /* saved projects get pasted here permanently */
+var STEPS=[
+["Python foundations","The base for everything else: syntax, data structures and problem solving."],
+["Django backend development","Building backend applications with models, views and templates."],
+["Basic DRF CRUD operations","Creating simple APIs that create, read, update and delete data."],
+["AI-assisted React and Tailwind frontends","Directing AI tools to produce attractive, responsive interfaces."],
+["Basic business automation with Make.com","Connecting apps and automating simple repetitive tasks."],
+["Advanced Django REST Framework","Going deeper into API design. In progress.",1],
+["Generative AI","Learning how generative models work and how to use them well. In progress.",1],
+["LLMs and AI integration","Learning to connect LLM capabilities to Django applications. In progress.",1]];
+var AUTO=[["Automated notifications","Alert the right person the moment something happens."],["Form submission workflows","Route enquiries into a spreadsheet or inbox automatically."],["Connecting business apps","Move data between the tools a small team already uses."],["Simple data handling","Tidy, copy and organize records without manual work."],["Repetitive task automation","Replace copy-and-paste routines with a scenario."],["Starting small","Each workflow is a learning exercise, built step by step."]];
+var VALUES=[["moon","Faith and purpose","My faith is my guiding principle and gives my work its direction."],["shield","Honesty and integrity","Representing my skills accurately and keeping my word."],["scale","Ethical innovation","Choosing products and business models that are clean and fair."],["gem","Creating meaningful value","Building things that solve genuine problems."],["book","Continuous learning","Always a student: each skill is a step, not a finish line."],["heart","Technology for positive impact","Using software to make life easier and knowledge more accessible."]];
+/* ===== END CONTENT ===== */
+
+var P={github:'<path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.1-1.4-.4-2.7-1.3-3.7.4-1.1.4-2.4 0-3.5 0 0-1.1-.3-3.700 1.400a13.400 13.400 0 0 0-7 0C6.700 2.400 5.600 2.700 5.600 2.700c-.4 1.100-.4 2.400 0 3.500A5.400 5.400 0 0 0 4 9.500c0 3.500 3 5.500 6 5.500-.4.400-.7 1-.9 1.700-.2.700-.2 1.500-.1 2.300v4"/><path d="M9 18c-4.500 2-5-2-7-2"/>',linkedin:'<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',mail:'<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>',building:'<rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/>',book:'<path d="M4 19.500v-15A2.500 2.500 0 0 1 6.500 2H20v20H6.500a2.500 2.500 0 0 1 0-5H20"/>',moon:'<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>',shield:'<path d="M20 13c0 5-3.500 7.500-7.700 8.900a1 1 0 0 1-.6 0C7.500 20.500 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.500-1.200 6.200-2.700a1.200 1.200 0 0 1 1.600 0C14.500 3.800 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>',scale:'<path d="M12 3v18M5 21h14M5 7l-3 8a4 4 0 0 0 6 0zM19 7l-3 8a4 4 0 0 0 6 0zM5 7h14"/>',gem:'<path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3 8 9l4 13 4-13-3-6M2 9h20"/>',heart:'<path d="M19 14c1.500-1.500 3-3.200 3-5.500A5.500 5.500 0 0 0 16.500 3c-1.800 0-3 .5-4.500 2-1.500-1.500-2.700-2-4.500-2A5.500 5.500 0 0 0 2 8.500c0 2.300 1.500 4 3 5.500l7 7z"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.900 4.900l1.400 1.400M17.700 17.700l1.400 1.400M2 12h2M20 12h2M4.900 19.100l1.400-1.400M17.700 6.300l1.400-1.400"/>',menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',down:'<path d="m6 9 6 6 6-6"/>'};
+function ic(k){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+P[k]+'</svg>'}
+function $(s){return document.querySelector(s)}
+document.querySelectorAll('[data-i]').forEach(function(el){el.insertAdjacentHTML('afterbegin',ic(el.dataset.i))});
+$('#yr').textContent=new Date().getFullYear();
+
+$('#skillGrid').innerHTML=SKILLS.map(function(s){return '<article class="card"><span class="tag t-'+s.c+'">'+s.tag+'</span><h3>'+s.t+'</h3><p style="margin-top:8px">'+s.d+'</p><div class="sk">'+s.i.map(function(x){return '<span class="'+(s.l?'l':'')+'">'+x+'</span>'}).join('')+'</div></article>'}).join('');
+
+var cats=["All Projects","Backend","Frontend","Full-Stack","AI & Automation"];
+function drawProj(f){$('#projGrid').innerHTML=allP().filter(function(p){return f==="All Projects"||p.cat===f}).map(function(p){return '<article class="card proj">'+shot(p)+'<div class="pb"><span class="tag t-ai" style="align-self:flex-start;margin:0">'+p.cat+'</span><h3>'+p.n+'</h3><p style="margin:0">'+p.d+'</p><small><b>Problem it solves:</b> '+p.p+'</small><div class="sk">'+p.s.map(function(x){return '<span>'+x+'</span>'}).join('')+'</div>'+plinks(p)+'</div></article>'}).join('')||'<p style="color:var(--mut)">No projects here yet. The first ones are on the way.</p>'}
+$('#filters').innerHTML=cats.map(function(c,i){return '<button type="button" aria-pressed="'+(i===0)+'">'+c+'</button>'}).join('');
+$('#filters').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;this.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});drawProj(b.textContent)});
+drawProj("All Projects");
+
+$('#tl').innerHTML=STEPS.map(function(s,i){return '<li class="'+(s[2]?'now':'')+'"><button type="button" aria-expanded="false" aria-controls="d'+i+'"><span>'+s[0]+(s[2]?' <small style="color:#e0a526;font-weight:500">· learning now</small>':'')+'</span>'+ic('down')+'</button><div class="d" id="d'+i+'"><div><p>'+s[1]+'</p></div></div></li>'}).join('');
+$('#tl').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var li=b.parentNode;var o=li.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+
+$('#autoGrid').innerHTML=AUTO.map(function(a){return '<div class="card"><h3>'+a[0]+'</h3><p style="margin:8px 0 0">'+a[1]+'</p></div>'}).join('');
+$('#valGrid').innerHTML=VALUES.map(function(v){return '<div class="card">'+ic(v[0])+'<h3>'+v[1]+'</h3><p style="margin:8px 0 0">'+v[2]+'</p></div>'}).join('');
+
+/* links */
+document.querySelectorAll('a[aria-label=GitHub]').forEach(function(a){if(LINKS.github){a.href=LINKS.github}else{a.style.display='none'}});
+document.querySelectorAll('a[aria-label=LinkedIn]').forEach(function(a){a.href=LINKS.linkedin;a.target='_blank'});
+
+/* projects: owner mode lets you add projects; they are saved in this browser until you paste them into PROJECTS */
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+var SAVED=[],OWN=false;
+try{SAVED=JSON.parse(localStorage.getItem('swm-projects')||'[]');OWN=localStorage.getItem('swm-owner')==='1'}catch(e){}
+function allP(){return PROJECTS.concat(SAVED||[])}
+function cur(){var b=$('#filters [aria-pressed=true]');return b?b.textContent:'All Projects'}
+function save(){try{localStorage.setItem('swm-projects',JSON.stringify(SAVED))}catch(e){alert('Could not save in this browser. Use Copy projects data to keep your work.')}}
+function shot(p){return p.img?'<img class="shotimg" src="'+p.img+'" alt="Screenshot of '+p.n+'">':'<div class="shot">No screenshot yet</div>'}
+function plinks(p){var h='';if(p.gh)h+='<a href="'+p.gh+'" rel="noopener" target="_blank">GitHub</a>';if(p.live)h+='<a href="'+p.live+'" rel="noopener" target="_blank">Live demo</a>';if(OWN&&p.id)h+='<button type="button" class="rm" data-del="'+p.id+'">Remove</button>';return h?'<div class="pl">'+h+'</div>':''}
+function fin(o){SAVED.push(o);save();drawProj(cur());$('#dlg').close()}
+function ownUI(){$('#own').hidden=!OWN;$('#ownT').textContent=OWN?'Exit owner mode':'Owner mode';drawProj(cur())}
+$('#ownT').addEventListener('click',function(){OWN=!OWN;try{localStorage.setItem('swm-owner',OWN?'1':'0')}catch(e){}ownUI()});
+$('#addP').addEventListener('click',function(){$('#pf').reset();$('#dlg').showModal()});
+$('#cx').addEventListener('click',function(){$('#dlg').close()});
+$('#projGrid').addEventListener('click',function(e){var b=e.target.closest('[data-del]');if(!b)return;SAVED=SAVED.filter(function(x){return x.id!==b.dataset.del});save();drawProj(cur())});
+$('#expP').addEventListener('click',function(){var t=JSON.stringify(SAVED),m=$('#expM');if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){m.textContent='Copied. Paste it in chat and I will add it permanently.'},function(){window.prompt('Copy this text:',t)})}else{window.prompt('Copy this text:',t)}});
+$('#pf').addEventListener('submit',function(e){e.preventDefault();var g=function(i){return $(i).value.trim()};var u=function(v){return v.indexOf('http')===0?esc(v):''};
+var o={id:'p'+Date.now(),n:esc(g('#pn')),cat:$('#pc').value,d:esc(g('#pd')),p:esc(g('#pp')),s:g('#ps').split(',').map(function(x){return esc(x.trim())}).filter(Boolean),gh:u(g('#pg')),live:u(g('#pv'))};
+var f=$('#pi').files[0];if(!f){fin(o);return}
+var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var w=Math.min(900,im.width),c=document.createElement('canvas');c.width=w;c.height=Math.round(im.height*w/im.width);c.getContext('2d').drawImage(im,0,0,c.width,c.height);o.img=c.toDataURL('image/jpeg',.8);fin(o)};im.onerror=function(){fin(o)};im.src=r.result};r.readAsDataURL(f)});
+ownUI();
+
+/* theme */
+var T=$('#theme');
+function setT(t){document.documentElement.dataset.theme=t;T.innerHTML=ic(t==='dark'?'sun':'moon');T.setAttribute('aria-label','Switch to '+(t==='dark'?'light':'dark')+' theme');try{localStorage.setItem('swm-theme',t)}catch(e){}}
+var st='dark';try{st=localStorage.getItem('swm-theme')||'dark'}catch(e){}
+setT(st);T.addEventListener('click',function(){setT(document.documentElement.dataset.theme==='dark'?'light':'dark')});
+
+/* mobile menu */
+var M=$('#menu'),L=$('#links');M.innerHTML=ic('menu');
+M.addEventListener('click',function(){var o=L.classList.toggle('open');M.setAttribute('aria-expanded',o)});
+L.addEventListener('click',function(e){if(e.target.closest('a')){L.classList.remove('open');M.setAttribute('aria-expanded',false)}});
+
+/* reveal */
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+
+/* contact form: opens the visitor's email app until you connect a backend (e.g. a DRF endpoint) */
+$('#cf').addEventListener('submit',function(e){e.preventDefault();
+var n=$('#n').value.trim(),m=$('#e').value.trim(),b=$('#m').value.trim(),f=$('#fm');
+if(!n||!/^\S+@\S+\.\S+$/.test(m)||!b){f.style.color='#f87171';f.textContent='Please fill in your name, a valid email and a message.';return}
+f.style.color='';f.textContent='Opening your email app to send the message…';
+location.href='mailto:'+LINKS.email+'?subject='+encodeURIComponent('Portfolio message from '+n)+'&body='+encodeURIComponent(b+'\n\nFrom: '+n+' ('+m+')')});
+</script>
+</body>
+</html>
