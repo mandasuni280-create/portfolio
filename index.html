@@ -351,7 +351,7 @@ document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
 $('#cf').addEventListener('submit',function(e){e.preventDefault();
 var n=$('#n').value.trim(),m=$('#e').value.trim(),b=$('#m').value.trim(),f=$('#fm');
 if(!n||!/^\S+@\S+\.\S+$/.test(m)||!b){f.style.color='#f87171';f.textContent='Please fill in your name, a valid email and a message.';return}
-f.style.color='';f.textContent='Opening your email app to send the message…';
+f.style.color='';f.textContent='Opening your email app. Press send there to finish.';setTimeout(function(){f.textContent='Done. If your email app didn’t open, write to '+LINKS.email+' directly.';$('#cf').reset()},4000);
 location.href='mailto:'+LINKS.email+'?subject='+encodeURIComponent('Portfolio message from '+n)+'&body='+encodeURIComponent(b+'\n\nFrom: '+n+' ('+m+')')});
 </script>
 </body>
