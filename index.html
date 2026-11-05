@@ -166,7 +166,7 @@ section{padding:76px 0}
 <main>
 <section class="hero" id="home"><div class="wrap hg">
 <div>
-<div class="pill"><span class="dot"></span>Currently learning: GenAI &amp; LLMs</div>
+<div class="pill"><span class="dot"></span>Currently learning: GenAI, LLMs &amp; Agentic AI</div>
 <h1>Building With Code. Creating With AI. <span>Driven By Purpose.</span></h1>
 <p class="in">I’m Sunira Were Manda, an aspiring software developer exploring the intersection of backend engineering, AI-assisted development, and intelligent applications. I build with Django, create modern interfaces using AI-powered workflows, and continuously explore new ways technology can solve meaningful problems.</p>
 <div class="chips"><span class="chip">Backend development</span><span class="chip">AI-assisted frontend creation</span><span class="chip">Generative AI exploration</span><span class="chip">Business automation</span></div>
@@ -193,7 +193,7 @@ section{padding:76px 0}
 <p>I’m currently a first-year student at Multimedia University. Alongside my studies, I’m self-driven in my learning, always seeking knowledge and working to advance my skills.</p>
 <p>I’m an aspiring software developer who wants to build useful digital products and solve real problems. My foundation is Python and Django, and I’m comfortable with basic Django REST Framework CRUD operations while I keep sharpening my API skills.</p>
 <p>On the frontend, I’m open about my approach: I use AI-assisted tools and design workflows to create modern React and Tailwind CSS interfaces. My strength is directing and customizing those experiences, not writing frontend code from scratch on my own.</p>
-<p>I also use Make.com to explore simple automations for small businesses, and I’m now learning Generative AI, LLMs and how to connect them to backend applications. The long-term goal is a company that builds valuable software.</p>
+<p>I also use Make.com to explore simple automations for small businesses, and I’m now learning Generative AI, LLMs, agentic AI and how to connect them to backend applications. The long-term goal is a company that builds valuable software.</p>
 </div></div></section>
 
 <section id="skills"><div class="wrap">
@@ -206,7 +206,7 @@ section{padding:76px 0}
 <span class="lead">Featured projects</span><h2>Selected work.</h2>
 <p class="sub">Things I’ve built and am building, shared as I finish them.</p>
 <div class="fl" id="filters" role="group" aria-label="Filter projects"></div>
-<div id="own" class="row" style="margin-bottom:24px" hidden><button class="btn pri" id="addP" type="button">Add project</button><button class="btn" id="expP" type="button">Copy projects data</button><span class="note" id="expM" style="margin:0">Owner mode: projects are saved in this browser only.</span></div>
+<div id="own" class="row" style="margin-bottom:24px" hidden><button class="btn pri" id="addP" type="button">Add project</button><button class="btn" id="expP" type="button">Download projects.js</button><span class="note" id="expM" style="margin:0">Owner mode: projects are saved in this browser only.</span></div>
 <div class="grid g3" id="projGrid"></div>
 <dialog id="dlg" aria-labelledby="dt"><form id="pf"><h3 id="dt">Add a project</h3><label>Project name<input id="pn" required></label><label>Category<select id="pc"><option>Backend</option><option>Frontend</option><option>Full-Stack</option><option>AI &amp; Automation</option></select></label><label>Description<textarea id="pd" style="min-height:80px"></textarea></label><label>Problem it solves<textarea id="pp" style="min-height:80px"></textarea></label><label>Tech stack (comma separated)<input id="ps" placeholder="Python, Django, DRF"></label><label>GitHub link (optional)<input id="pg" type="url" placeholder="https://github.com/..."></label><label>Live demo link (optional)<input id="pv" type="url" placeholder="https://..."></label><label>Screenshot (optional)<input id="pi" type="file" accept="image/*"></label><div class="row"><button class="btn pri" type="submit">Save project</button><button class="btn" id="cx" type="button">Cancel</button></div></form></dialog>
 </div></section>
@@ -262,6 +262,7 @@ section{padding:76px 0}
 <button id="ownT" type="button" style="background:none;border:0;color:var(--mut);font:inherit;cursor:pointer;text-decoration:underline;padding:0">Owner mode</button>
 </div></footer>
 
+<script src="projects.js"></script>
 <script>
 /* ===== EDIT YOUR CONTENT HERE ===== */
 var LINKS={email:"mandasuni280@gmail.com",github:"https://github.com/mandasuni280-create",linkedin:"https://www.linkedin.com/in/sunira-manda-941b42434"};
@@ -270,9 +271,9 @@ var SKILLS=[
 {t:"AI-assisted frontend creation",tag:"AI-assisted workflow",c:"ai",d:"I direct and customize AI-generated interfaces. I don’t claim to write React independently.",i:["React (AI-generated)","Tailwind CSS (AI-generated)","UI/UX direction","Responsive layouts","Prompting design tools"]},
 {t:"Automation",tag:"Familiar with",c:"fam",d:"Simple workflows that cut repetitive work.",i:["Make.com","Basic workflow automation","Connecting apps"]},
 {t:"Development tools",tag:"Familiar with",c:"fam",d:"My everyday toolkit.",i:["Git","GitHub","PyCharm","Docker (basic)","AI coding assistants"]},
-{t:"Artificial intelligence",tag:"Currently learning",c:"learn",d:"Where most of my study time goes right now.",i:["Generative AI","Large Language Models","Prompt engineering","AI API integration","LLMs in Django apps"],l:1},
+{t:"Artificial intelligence",tag:"Currently learning",c:"learn",d:"Where most of my study time goes right now.",i:["Generative AI","Large Language Models","Prompt engineering","AI API integration","Agentic AI","LLMs in Django apps"],l:1},
 {t:"Advanced APIs",tag:"Currently learning",c:"learn",d:"Moving beyond the basics.",i:["Advanced Django REST Framework","Authentication","Serializers and viewsets"],l:1}];
-var PROJECTS=[]; /* saved projects get pasted here permanently */
+var PROJECTS=window.PROJECTS_DATA||[]; /* loaded from projects.js, which Owner mode creates */
 var STEPS=[
 ["Python foundations","The base for everything else: syntax, data structures and problem solving."],
 ["Django backend development","Building backend applications with models, views and templates."],
@@ -281,7 +282,8 @@ var STEPS=[
 ["Basic business automation with Make.com","Connecting apps and automating simple repetitive tasks."],
 ["Advanced Django REST Framework","Going deeper into API design. In progress.",1],
 ["Generative AI","Learning how generative models work and how to use them well. In progress.",1],
-["LLMs and AI integration","Learning to connect LLM capabilities to Django applications. In progress.",1]];
+["LLMs and AI integration","Learning to connect LLM capabilities to Django applications. In progress.",1],
+["Agentic AI","Learning how AI agents plan, use tools and take actions to complete tasks. In progress.",1]];
 var AUTO=[["Automated notifications","Alert the right person the moment something happens."],["Form submission workflows","Route enquiries into a spreadsheet or inbox automatically."],["Connecting business apps","Move data between the tools a small team already uses."],["Simple data handling","Tidy, copy and organize records without manual work."],["Repetitive task automation","Replace copy-and-paste routines with a scenario."],["Starting small","Each workflow is a learning exercise, built step by step."]];
 var VALUES=[["moon","Faith and purpose","My faith is my guiding principle and gives my work its direction."],["shield","Honesty and integrity","Representing my skills accurately and keeping my word."],["scale","Ethical innovation","Choosing products and business models that are clean and fair."],["gem","Creating meaningful value","Building things that solve genuine problems."],["book","Continuous learning","Always a student: each skill is a step, not a finish line."],["heart","Technology for positive impact","Using software to make life easier and knowledge more accessible."]];
 /* ===== END CONTENT ===== */
@@ -314,7 +316,7 @@ document.querySelectorAll('a[aria-label=LinkedIn]').forEach(function(a){a.href=L
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 var SAVED=[],OWN=false;
 try{SAVED=JSON.parse(localStorage.getItem('swm-projects')||'[]');OWN=localStorage.getItem('swm-owner')==='1'}catch(e){}
-function allP(){return PROJECTS.concat(SAVED||[])}
+function allP(){var seen={};return PROJECTS.concat(SAVED||[]).filter(function(p){if(!p.id)return true;if(seen[p.id])return false;seen[p.id]=1;return true})}
 function cur(){var b=$('#filters [aria-pressed=true]');return b?b.textContent:'All Projects'}
 function save(){try{localStorage.setItem('swm-projects',JSON.stringify(SAVED))}catch(e){alert('Could not save in this browser. Use Copy projects data to keep your work.')}}
 function shot(p){return p.img?'<img class="shotimg" src="'+p.img+'" alt="Screenshot of '+p.n+'">':'<div class="shot">No screenshot yet</div>'}
@@ -324,8 +326,8 @@ function ownUI(){$('#own').hidden=!OWN;$('#ownT').textContent=OWN?'Exit owner mo
 $('#ownT').addEventListener('click',function(){OWN=!OWN;try{localStorage.setItem('swm-owner',OWN?'1':'0')}catch(e){}ownUI()});
 $('#addP').addEventListener('click',function(){$('#pf').reset();$('#dlg').showModal()});
 $('#cx').addEventListener('click',function(){$('#dlg').close()});
-$('#projGrid').addEventListener('click',function(e){var b=e.target.closest('[data-del]');if(!b)return;SAVED=SAVED.filter(function(x){return x.id!==b.dataset.del});save();drawProj(cur())});
-$('#expP').addEventListener('click',function(){var t=JSON.stringify(SAVED),m=$('#expM');if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){m.textContent='Copied. Paste it in chat and I will add it permanently.'},function(){window.prompt('Copy this text:',t)})}else{window.prompt('Copy this text:',t)}});
+$('#projGrid').addEventListener('click',function(e){var b=e.target.closest('[data-del]');if(!b)return;SAVED=SAVED.filter(function(x){return x.id!==b.dataset.del});PROJECTS=PROJECTS.filter(function(x){return x.id!==b.dataset.del});save();drawProj(cur())});
+$('#expP').addEventListener('click',function(){var t=JSON.stringify(allP()),m=$('#expM');var bl=new Blob(['window.PROJECTS_DATA='+t+';'],{type:'text/javascript'}),a=document.createElement('a');a.href=URL.createObjectURL(bl);a.download='projects.js';document.body.appendChild(a);a.click();a.remove();m.textContent='Downloaded projects.js. Upload it to your GitHub repo next to index.html.';return;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){m.textContent='Copied. Paste it in chat and I will add it permanently.'},function(){window.prompt('Copy this text:',t)})}else{window.prompt('Copy this text:',t)}});
 $('#pf').addEventListener('submit',function(e){e.preventDefault();var g=function(i){return $(i).value.trim()};var u=function(v){return v.indexOf('http')===0?esc(v):''};
 var o={id:'p'+Date.now(),n:esc(g('#pn')),cat:$('#pc').value,d:esc(g('#pd')),p:esc(g('#pp')),s:g('#ps').split(',').map(function(x){return esc(x.trim())}).filter(Boolean),gh:u(g('#pg')),live:u(g('#pv'))};
 var f=$('#pi').files[0];if(!f){fin(o);return}
